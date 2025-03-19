@@ -1,5 +1,20 @@
 sudo apt install docker-compose
  sudo nano docker-compose.yml
+
+
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Devasri9104
+
 docker-compose up -d
 
 Creating network "devasri_default" with the default driver
