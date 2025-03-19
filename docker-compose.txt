@@ -1,0 +1,53 @@
+sudo apt install docker-compose
+ sudo nano docker-compose.yml
+docker-compose up -d
+
+Creating network "devasri_default" with the default driver
+Pulling web (nginx:latest)...
+latest: Pulling from library/nginx
+6e909acdb790: Pull complete
+5eaa34f5b9c2: Pull complete
+417c4bccf534: Pull complete
+e7e0ca015e55: Pull complete
+373fe654e984: Pull complete
+97f5c0f51d43: Pull complete
+c22eb46e871a: Pull complete
+Digest: sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19
+Status: Downloaded newer image for nginx:latest
+Pulling db (mysql:latest)...
+latest: Pulling from library/mysql
+804bb8ae89de: Pull complete
+1b515e7ceb69: Pull complete
+eaa11c0a9f08: Pull complete
+8d18181893b8: Pull complete
+e0a910cc8604: Pull complete
+bc0c792ca096: Pull complete
+8d73d2a73425: Pull complete
+4a7e00d873b9: Pull complete
+27a2553d6a80: Pull complete
+69e76254f502: Pull complete
+Digest: sha256:9b9d0aab4860798acff13d2a0ece3bc26639fe18b83fa5cd3e3d0e16b3ed05dd
+Status: Downloaded newer image for mysql:latest
+Creating devasri_web_1 ... done
+Creating devasri_db_1  ... done
+
+
+docker exec -it devasri_db_1 /bin/bash
+
+bash-5.1# mysql -u -root -p
+Enter password:
+
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 9.2.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
