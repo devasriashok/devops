@@ -1,0 +1,15 @@
+  GNU nano 7.2                                                                                   pod.yml                                                                                             apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+      app: my-web-app
+
+spec:
+  containers:
+    - name: nginx-container
+      image: devasria/mysimplewebapplication:latest
+      ports:
+        - containerPort: 80
+
+
